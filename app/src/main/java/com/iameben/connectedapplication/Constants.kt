@@ -1,6 +1,6 @@
 package com.iameben.connectedapplication
 
-class Constatants {
+class Constants {
 
     companion object{
         const val BASE_URL = "https://rickandmortyapi.com/"
