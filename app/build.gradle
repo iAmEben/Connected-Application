@@ -39,9 +39,15 @@ dependencies {
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
+    // Retrofit library
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
-    implementation "com.sqaureup.retrofit2:converter-moshi:2.9.0"
-    implementation "com.squareup.okhttp3:okhttp:4.9.0"
+    implementation "com.sqaureup.retrofit2:converter-gson:2.6.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.5.0"
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx-coroutines-core:1.3.5'
+    implementation 'org.jetbrains.kotlinx-coroutines-android:1.3.5'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
