@@ -11,6 +11,7 @@ import com.iameben.connectedapplication.Common.Common
 import com.iameben.connectedapplication.Interface.RetrofitService
 import com.iameben.connectedapplication.Model.Name
 import dmax.dialog.SpotsDialog
+import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Callback
 import retrofit2.Response
 import java.util.jar.Attributes
@@ -27,9 +28,9 @@ class MainActivity : AppCompatActivity() {
 
         mService = Common.retrofitService
 
-        findViewById<RecyclerView>(R.id.contactsRV).setHasFixedSize(true)
+        contactsRV.setHasFixedSize(true)
         layoutManager = LinearLayoutManager(this)
-        findViewById<RecyclerView>(R.id.contactsRV).layoutManager = layoutManager
+        contactsRV.layoutManager = layoutManager
         dialog = SpotsDialog.Builder().setCancelable(false).setContext(this).build()
         getAllNameList()
 
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             ) {
                 adapter = MyNameAdapter(baseContext, p1.body() as MutableList<Name>)
                 adapter.notifyDataSetChanged()
-                findViewById<RecyclerView>(R.id.contactsRV).adapter = adapter
+                contactsRV.adapter = adapter
 
                 dialog.dismiss()
             }

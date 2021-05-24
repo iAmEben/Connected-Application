@@ -10,10 +10,12 @@ import com.squareup.picasso.Picasso
 import androidx.recyclerview.widget.RecyclerView
 import com.iameben.connectedapplication.Model.Name
 import com.iameben.connectedapplication.R
+import kotlinx.android.synthetic.main.list_model.view.*
 
 class MyNameAdapter(private val context: Context,
                     private val nameList: MutableList<Name>):
     RecyclerView.Adapter<MyNameAdapter.MyViewHolder>() {
+
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var img_specie: ImageView
         var nameTv: TextView
@@ -21,10 +23,10 @@ class MyNameAdapter(private val context: Context,
         var specieTv: TextView
 
         init {
-            img_specie = itemView.findViewById(R.id.img_specie)
-            statusTv = itemView.findViewById(R.id.statusTv)
-            nameTv = itemView.findViewById(R.id.nameTv)
-            specieTv = itemView.findViewById(R.id.specieTv)
+            img_specie = itemView.img_specie
+            statusTv = itemView.statusTv
+            nameTv = itemView.nameTv
+            specieTv = itemView.specieTv
         }
 
     }
@@ -36,7 +38,7 @@ class MyNameAdapter(private val context: Context,
 
     override fun onBindViewHolder(p0: MyViewHolder, p1: Int) {
         Picasso.get().load(nameList[p1].image).into(p0.img_specie)
-        p0.specieTv.text = nameList[p1].specie
+        p0.specieTv.text = nameList[p1].species
         p0.statusTv.text = nameList[p1].status
         p0.nameTv.text = nameList[p1].name
 

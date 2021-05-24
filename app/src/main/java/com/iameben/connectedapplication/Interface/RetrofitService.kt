@@ -5,6 +5,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface RetrofitService {
-    @GET("api/character")
+    @GET("character")
     fun getNameList(): Call<MutableList<Name>>
 }
