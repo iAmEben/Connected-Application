@@ -30,21 +30,21 @@
             android:layout_marginBottom="12dp">
 
             <TextView
-                android:id="@+id/name"
+                android:id="@+id/nameTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Franklin Yeon"
                 android:textColor="#000"/>
 
             <TextView
-                android:id="@+id/status"
+                android:id="@+id/statusTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Yellow"
                 android:layout_marginTop="4dp" />
 
             <TextView
-                android:id="@+id/specie"
+                android:id="@+id/specieTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Amphibian"
